@@ -708,7 +708,7 @@ header {
 }
 
 /* Para Laptops Random */
-@media (min-width: 769px) and (max-width: 1150px) {
+@media (min-width: 1025px) and (max-width: 1150px) {
     .cabecera-fila {
         flex-direction: column; 
         padding: 2rem;
@@ -768,7 +768,7 @@ header {
 }
 
 /* Para Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     
     .cabecera-fila {
         flex-direction: column; 
@@ -1008,4 +1008,9 @@ header {
         justify-content: center; 
     }
 }
+
+
+
+
+
 
