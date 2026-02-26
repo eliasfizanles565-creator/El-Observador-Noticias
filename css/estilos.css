@@ -187,6 +187,11 @@ nav a:hover {
     color: #00c3ff;
 }
 
+
+
+
+
+
 .contenedor {
     display: flex;
     width: 90%;
@@ -787,20 +792,36 @@ aside h3 {
 /* Para Celulares */
 @media (max-width: 480px) {
 
-
-
-
-.listas {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-}
-
-.listas a {
-    font-size: 0.7rem;
-    display: flex;
-    flex-direction: column;
-}
     
+.navegacion ul {
+    display: flex;
+    flex-wrap: wrap;         /* Si no caben, bajan */
+    justify-content: center;   /* Centra los botones */
+    padding: 0;               /* ELIMINA EL BORDE AZUL EXTRA */
+    margin: 0;                /* Quita márgenes por defecto */
+    width: 100%;              /* No permite que sea más ancho que el celular */
+    list-style: none;         /* Asegura que no haya puntitos de lista */
+}
+
+/* 2. Ajustamos cada "casilla" del menú */
+.listas {
+    width: auto !important;   /* Deja que el botón sea del tamaño del texto */
+    margin: 5px;              /* Espacio pequeño entre botones */
+}
+
+/* 3. Ajustamos el enlace interno */
+.listas a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;   /* Tamaño perfecto para tocar con el dedo */
+    text-align: center;
+    font-size: 1.2rem;        /* Un poco más grande para leer bien */
+}
+
+
+
+
+
+
     .cabecera-fila {
         flex-direction: column; /* Título arriba, menú abajo */
         padding: 2rem;
