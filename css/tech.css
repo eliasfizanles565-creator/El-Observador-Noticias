@@ -1,0 +1,1011 @@
+ :root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0061a7;
+    --gris: #757575;
+    --grisClaro:#dfe9f3;
+    --azulClaro:#143864;
+    --azulIntermedio:#042a4d;
+    --azulProfundo:#10243d;
+    --celeste: #0084c2;
+    --aqua: #00ffff;
+    --aquaIntermedio: #00aaff;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    background-color: var(--azulProfundo);
+
+}
+
+header {
+    background-color: var(--azulClaro);
+    height: 11rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+}
+
+.titulo a {
+    text-decoration: none; 
+    color: inherit;        
+    cursor: text;      
+}
+
+.bloque-central {
+    display: flex;
+    flex-direction: row;    
+    align-items: center;    
+    gap: 25px;              /* Espacio exacto entre el logo y el texto */
+    margin-right: 6%;
+    margin-top: .7%;
+    
+}
+
+.logo-mundo {
+    height: 7rem;
+    width: auto;
+    display: block;         /* Ayuda a que se comporte bien en el flex */
+    padding-bottom: 3%;
+}
+
+.titulo {
+    font-family: "UnifrakturMaguntia", cursive;
+    color: var(--grisClaro);
+    font-size: 7rem;
+    margin: 0;
+    white-space: nowrap;    /* Evita que el título se baje si la pantalla es chica */
+    transition: color .25 ease;
+}
+.titulo:hover {
+    color: var(--aquaIntermedio);
+}
+
+.buscador {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buscador input {
+    box-sizing: border-box;
+    
+    width: 120px; 
+    height: 45px;
+    cursor: pointer;
+    
+    background-color: var(--secundario);
+    border-radius: 25px;
+    border: 2px solid var(--aqua);
+    outline: none;
+    color: var(--blanco);
+
+    /* LUPA */
+    background-image: url('../img/12\ lupa.svg');
+    background-repeat: no-repeat;
+    background-position: 12px center; 
+    background-size: 20px;
+
+    /* EL TEXTO: Empieza después de la lupa */
+    padding-left: 40px; 
+    
+    /* 4. Animación de expansión */
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buscador input:hover,
+.buscador input:focus
+{
+    width: 300px; /* Se expande hacia la izquierda */
+    cursor: text;
+}
+
+.buscador input::placeholder {
+    color: #dfe9f3;
+    opacity: 1;
+}
+
+
+
+.cabecera-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los botones con el centro del texto */
+    padding: 0rem 5rem 0 1rem; 
+}
+
+
+.tecnologia {
+    padding-left: 5rem;
+}
+
+.titulo-principal {
+    color: var(--blanco);
+    font-size: 5rem;
+    font-style: italic;
+    transition: color .25 ease;
+}
+.titulo-principal:hover {
+    color: var(--aquaIntermedio);
+}
+
+
+.contenedor-barra {
+    padding-left: 4rem;
+    
+}
+
+.barra{
+    background: linear-gradient(90deg, 
+        var(--azulIntermedio) 0%, 
+        var(--azulIntermedio) 40%, 
+        var(--celeste) 40%, 
+        var(--celeste) 100%  );
+    width: 70%;
+    height: 3rem;
+    border: 3px solid;
+    border-color: var(--negro);
+    border-radius: 10px;
+
+    background-size: 200% 100%;
+    
+    /* ANIMACIÓN INFINITA */
+    /* Nombre | Duración | Curva de tiempo | Repetición */
+    animation: llenarBarra 3s ease-in-out infinite;
+}
+
+@keyframes llenarBarra {
+    0% {
+        background-position: 100% 0; /* Vacía (color claro) */
+    }
+    50% {
+        background-position: 0% 0;   /* Llena (se ve el 35% oscuro) */
+    }
+    100% {
+        background-position: 100% 0; /* Vuelve a vaciarse */
+    }
+}
+
+
+.nav-bg {
+    background-color: var(--celeste);
+    /* padding: 1rem 2rem ; */
+    border: 3px solid;
+    border-color: var(--negro);
+    border-radius: 15px;
+    overflow: hidden
+}
+
+.navegacion-principal {
+    display: flex;
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem ;
+    font-weight: 700;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--azulIntermedio);
+    color: var(--aquaIntermedio);
+}
+
+
+.seccion-noticia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azulClaro);
+    padding: 2rem 5rem;
+    border: 3px solid;
+    border-color: var(--negro);
+    border-radius: 15px;
+    margin: 4rem 3rem;
+    position: relative;
+}
+
+
+.bloque-texto {
+    max-width: 100%; /* Evita que el texto se estire a lo largo */
+}
+
+.titular {
+    border: 0;
+    color: var(--blanco);
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 0rem;
+    transition: color .25 ease;
+}
+
+.titular:hover{
+    color: var(--aquaIntermedio);
+}
+
+.descripcion {
+    color: #cbd5e0;
+    font-size: 3rem;
+    line-height: 1.5;
+    margin-bottom: 7rem;
+    margin-top: 3rem;
+}
+
+
+
+
+.bloque-texto {
+    position: relative; /* Ya lo tenías, pero asegúrate */
+}
+
+
+.noticia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Todas invisibles al inicio */
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.noticia.n1 {
+    position: relative; /* ¡CLAVE! Esto evita que el bloque azul se encoja */
+}
+
+
+@keyframes aparecerNoticia {
+    0%, 30% { opacity: 1; visibility: visible; }
+    33%, 100% { opacity: 0; visibility: hidden; }
+}
+
+.noticia.n1 { animation: aparecerNoticia 15s infinite; }
+.noticia.n2 { animation: aparecerNoticia 15s infinite -5s; } /* Mismo retraso que img-2 */
+.noticia.n3 { animation: aparecerNoticia 15s infinite -10s; } /* Mismo retraso que img-3 */
+
+
+
+/* --- IMÁGENES APILADAS (STACK) --- */
+.bloque-imagenes {
+    position: absolute;
+    right: 1%;
+    width: 95rem;
+    height: 55rem;
+    box-shadow: 0px 2px 15px var(--negro)
+}
+
+/* Contenedor principal para que el texto aparezca a la izquierda */
+.tarjeta-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Para poner texto a la izquierda e imagen a la derecha */
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    background-color: #041b2d; /* Fondo igual al de la sección */
+    border-radius: 15px;
+    border: 5px solid;
+    border-color: var(--aquaIntermedio);
+}
+
+/* --- ANIMACIÓN SOLO CSS --- */
+@keyframes rotarNoticia {
+    0%, 30% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; visibility: visible; }
+    33%, 63% { z-index: 1; transform: translateX(-160px) translateY(-30px) scale(0.8); opacity: 0.3; visibility: visible; }
+    66%, 96% { z-index: 2; transform: translateX(-80px) translateY(-15px) scale(0.9); opacity: 0.6; visibility: visible; }
+    100% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; }
+}
+
+.img-1 { animation: rotarNoticia 15s infinite; }
+.img-2 { animation: rotarNoticia 15s infinite -5s; }
+.img-3 { animation: rotarNoticia 15s infinite -10s; }
+
+
+
+/* --- INDICADORES (DOTS) EN EL MEDIO --- */
+.indicadores-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.indicadores-dots span {
+    width: 14px;
+    height: 14px;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 15px var(--azulProfundo)
+}
+
+.indicadores-dots .active {
+    background-color: var(--aquaIntermedio);
+    
+}
+
+
+
+.contenedor-principal {
+    display: flex;      
+    align-items: flex-start;
+    gap: 3rem;           
+    margin: 4rem 3rem;   
+}
+
+.carrito {
+    flex: 2;             
+}
+
+.carrito img {
+    border: 5px solid var(--aquaIntermedio);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.carrito h2 {
+    font-size: 4.5rem;
+    width: 95%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+.carrito p {
+    font-size: 2.5rem;
+    width: 92%;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+
+.docentes {
+    flex: 1;            
+    padding: 2rem;
+}
+
+.docentes img {
+    margin-bottom: 1rem;
+    border: 5px solid var(--aquaIntermedio);
+    border-radius: 10px;
+    width: 100%;
+    height: 32rem;
+}
+
+.docentes h3 {
+    width: 98%;
+    font-size: 3rem;
+    margin-left: 1rem;
+    margin-bottom: 0rem;
+}
+
+.docentes p {
+    width: 98%;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-top: .8rem;
+}
+
+
+/* --- EFECTO ZOOM PARA CARRITO Y DOCENTES --- */
+
+.carrito, .docentes {
+    overflow: visible; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrito img, .docentes img{
+    transition: transform 0.2s ease-out, filter 0.2s ease-out; 
+    cursor: pointer;
+    will-change: transform; 
+}
+
+.carrito img:hover, .docentes img:hover {
+    transform: scale(1.30); 
+    filter: brightness(1.10);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+
+/* --- SECCIÓN DE 5 COLUMNAS --- */
+.noticias-secundarias {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Crea las 5 columnas iguales */
+    gap: 2rem;       /* Espacio entre noticias */
+    padding: 4rem 3rem;
+    background-color: #041b2d; /* El azul oscuro de tu fondo */
+}
+
+/* Estilo de cada noticia individual */
+.item-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todo a la izquierda como en tu imagen */
+}
+
+/* El marco celeste de las imágenes */
+.marco-secundario {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción de las capturas */
+    border: 3px solid var(--aquaIntermedio);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 2px 20px #00000080;
+}
+
+.marco-secundario img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto zoom solo en estas imágenes pequeñas */
+.marco-secundario:hover img {
+    transform: scale(1.2);
+}
+
+.titular-mini {
+    color: var(--blanco);
+    font-size: 2.6rem; /* Más pequeño para que no rompa la rejilla */
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-bottom: 0rem;
+    margin-left: 2rem;
+    margin-top: 0rem;
+}
+
+.txt-mini {
+    color: #cbd5e0;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-top: .5rem;
+    margin-left: 2rem;
+}
+
+
+
+
+
+
+
+
+.pie-pagina {
+    background-color: var(--azulClaro); /* El azul oscuro que usas */
+    border-top: 3px solid var(--negro);
+    padding: 1rem 0 0 0;
+    color: var(--blanco);
+    font-family: 'Times New Roman', serif; /* Para ese estilo clásico de periódico */
+    margin-bottom: 0rem;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-around; /* Reparte las columnas equitativamente */
+    align-items: flex-start;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer-col a {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* --- LOGOTIPO --- */
+.logo-footer {
+    font-size: 6rem;
+    line-height: 0.8;
+    font-family: "UnifrakturMaguntia", cursive;
+    transition: color .25 ease;
+}
+.logo-footer:hover {
+    color: var(--aquaIntermedio);
+}
+
+.logo-footer span {
+    font-size: 4rem;
+    margin-left: 11rem;
+}
+
+/* --- ENLACES --- */
+
+.enlaces-footer a {
+    color: var(--blanco);
+    text-decoration: underline;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    transition: color .25 ease;
+}
+
+.enlaces-footer a:hover {
+    color: var(--aquaIntermedio);
+}
+
+/* --- ICONOS SOCIALES --- */
+.footer-titulo {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: color .25 ease;
+}
+
+.footer-titulo:hover {
+    color: var(--aquaIntermedio);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.social-icons img {
+    width: 45px; /* Tamaño de tus PNG */
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* --- CONTACTO --- */
+.contacto-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+}
+
+.contacto-email img {
+    width: 35px;
+}
+
+/* --- BARRA FINAL --- */
+.footer-bottom {
+    text-align: center;
+    border-top: 3px solid var(--negro);
+    margin-top: 0rem;
+    background-color: var(--azulClaro);
+    
+}
+
+.footer-bottom p {
+    margin-bottom: 1rem;
+    margin:0;
+    padding: 1rem 0;
+    background-color: transparent;
+    font-size: 1.8rem;
+    transition: color .25 ease;
+}
+
+.footer-bottom p:hover {
+    color: var(--aquaIntermedio);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Para NAVEGADOR OPERA CON BARRA LATERAL */
+@media (min-width:1851px) and (max-width: 1909px) {
+    .titulo { font-size: 7rem; } 
+    .bloque-imagenes { width: 50%; height: 530px; }
+    
+
+    .seccion-noticia {
+        padding-left: 3rem;
+    }
+    .titular { 
+        font-size: 4.2rem; 
+    } 
+    .descripcion { font-size: 2.8rem; }
+
+    @keyframes rotarNoticia {
+        0%, 30% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; visibility: visible; }
+        33%, 63% { z-index: 1; transform: translateX(-140px) translateY(-30px) scale(0.8); opacity: 0.3; visibility: visible; }
+        66%, 96% { z-index: 2; transform: translateX(-70px) translateY(-15px) scale(0.9); opacity: 0.6; visibility: visible; }
+        100% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; }
+    }
+
+    .titular-mini {
+        font-size: 3rem;
+    }
+}
+
+/* Para Laptops 2 */
+@media (min-width:1281px) and (max-width: 1850px) {
+    .titulo { font-size: 7rem; } 
+    .bloque-imagenes { width: 50%; height: 120%; }
+    
+    
+
+    .seccion-noticia {
+        padding-left: 3rem;
+    }
+    .titular { 
+        font-size: 3rem; 
+    } 
+    .descripcion { font-size: 2.3rem; }
+
+    @keyframes rotarNoticia {
+        0%, 30% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; visibility: visible; }
+        33%, 63% { z-index: 1; transform: translateX(-120px) translateY(-30px) scale(0.8); opacity: 0.3; visibility: visible; }
+        66%, 96% { z-index: 2; transform: translateX(-60px) translateY(-15px) scale(0.9); opacity: 0.6; visibility: visible; }
+        100% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; }
+    }
+}
+
+/* Para Laptops */
+@media (max-width: 1280px) {
+    .titulo { font-size: 5rem; } 
+    .bloque-imagenes { width: 50%; height: 120%; }
+    
+
+    .seccion-noticia {
+        padding-left: 3rem;
+    }
+    .titular { 
+        font-size: 2.5rem; 
+    } 
+    .descripcion { font-size: 1.8rem; }
+
+    @keyframes rotarNoticia {
+        0%, 30% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; visibility: visible; }
+        33%, 63% { z-index: 1; transform: translateX(-120px) translateY(-30px) scale(0.8); opacity: 0.3; visibility: visible; }
+        66%, 96% { z-index: 2; transform: translateX(-60px) translateY(-15px) scale(0.9); opacity: 0.6; visibility: visible; }
+        100% { z-index: 3; transform: translateX(0) scale(1); opacity: 1; }
+    }
+
+    .txt-mini {
+        font-size: 1.7rem;
+    }
+}
+
+/* Para Laptops Random */
+@media (min-width: 769px) and (max-width: 1150px) {
+    .cabecera-fila {
+        flex-direction: column; 
+        padding: 2rem;
+    }
+    
+    .buscador {
+        position: absolute;
+        right: 3%;
+        top: 100%;
+        transform: translateY(-50%);
+    }
+
+    .buscador input {
+        box-sizing: border-box;
+        width: 120px; 
+        height: 45px;
+        cursor: pointer;
+    }
+
+
+
+    .tecnologia {
+        padding: 0rem;
+    }
+
+    .barra { width: 90%; } 
+    
+    .seccion-noticia {
+        display: flex;
+        flex-wrap: wrap;   
+        padding right: 0rem; 
+    }
+
+    .titular { 
+        font-size: 4.7rem; 
+        text-align: center;
+    } 
+    .descripcion { 
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .indicadores-dots {
+        margin-bottom: 2rem;
+    }
+
+    .bloque-imagenes {
+        width: 100%;
+        height: 550px;
+        right: 0;
+        position: relative;
+        transform: none;
+    }
+    
+    
+}
+
+/* Para Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    
+    .cabecera-fila {
+        flex-direction: column; 
+        padding: 2rem;
+    }
+    
+    .titulo { font-size: 6rem; } 
+    .logo-mundo {
+        height: 7rem;
+        width: auto;
+        display: block;         /* Ayuda a que se comporte bien en el flex */
+        padding-bottom: 3%;
+    }
+
+    .buscador {
+        position: absolute;
+        right: 3%;
+        top: 100%;
+        transform: translateY(-50%);
+    }
+
+    .buscador input {
+        box-sizing: border-box;
+        width: 120px; 
+        height: 45px;
+        cursor: pointer;
+    }
+
+
+
+    .tecnologia {
+        padding: 0rem;
+    }
+
+    .barra { width: 90%; } 
+    
+    .seccion-noticia {
+        display: flex;
+        flex-wrap: wrap;    
+    }
+
+    .titular { 
+        font-size: 4rem; } 
+    .descripcion { 
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .indicadores-dots {
+        margin-bottom: 2rem;
+    }
+
+    .bloque-imagenes {
+        width: 100%;
+        height: 350px;
+        right: 0;
+        position: relative;
+        transform: none; 
+    }
+    
+    .carrito h2 {
+        font-size: 3rem;
+        width: 90%;
+    }
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .noticias-secundarias {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .footer-contenido {
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center;     
+        gap: 4rem;              
+        padding: 4rem 2rem;     
+    }
+
+    .logo-footer {
+        font-size: 8.5rem;     
+    }
+
+    .logo-footer span {
+        font-size: 7rem;  
+        margin-top: 2.8rem;
+        margin-left: 0;         
+        display: block;         
+    }
+
+    .enlaces-footer a {
+        align-items: center; 
+        font-size: 3.5rem;   
+    }
+
+    .footer-titulo {
+        font-size: 4rem;
+    }
+
+    .social-icons {
+        justify-content: center; 
+        gap: 30px;
+    }
+
+    .social-icons img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .contacto-email {
+        justify-content: center; 
+    }
+
+    .contacto-email span {
+        font-size: 3rem;
+    }
+}
+
+
+
+/* Para Celulares */
+@media (max-width: 480px) {
+
+    nav.li{
+        display: flex;
+        justify-content: space-between;
+        width: 5rem;
+    }
+
+    .cabecera-fila {
+        flex-direction: column; /* Título arriba, menú abajo */
+        padding: 2rem;
+    }
+    
+    .titulo { font-size: 5rem; } 
+    .logo-mundo {
+        height: 6rem;
+        width: auto;
+        display: block;         
+        padding-bottom: 3%;
+    }
+
+
+    .buscador {
+        position: absolute;
+        right: 3%;
+        top: 100%;
+        transform: translateY(-50%);
+    }
+
+    .buscador input {
+        box-sizing: border-box;
+        width: 105px; 
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .tecnologia {
+        padding: 0rem;
+    }
+    
+    .barra { width: 90%; } 
+    
+    .seccion-noticia {
+        display: flex;
+        flex-wrap: wrap;   
+        margin: 1rem; 
+    }
+
+    .titular { 
+        font-size: 3.7rem; 
+    } 
+    .descripcion { 
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+    
+    .indicadores-dots {
+        margin-bottom: 2rem;
+    }
+
+    .bloque-imagenes {
+        width: 100%;
+        height: 200px;
+        right: 0;
+        position: relative;
+        transform: none; 
+    }
+    
+    .carrito h2 {
+        font-size: 3rem;
+        width: 90%;
+    }
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .noticias-secundarias {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-contenido {
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center;     
+        gap: 4rem;              
+        padding: 4rem 2rem;     
+    }
+
+    .logo-footer {
+        font-size: 4.5rem;     
+    }
+
+    .logo-footer span {
+        margin-top: 2rem;
+        margin-left: 0;         
+        display: block;         
+    }
+
+    .enlaces-footer {
+        align-items: center;    
+    }
+
+    .social-icons {
+        justify-content: center; 
+    }
+
+    .contacto-email {
+        justify-content: center; 
+    }
+}
+
