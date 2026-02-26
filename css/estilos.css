@@ -812,9 +812,9 @@ aside h3 {
 /* 3. Ajustamos el enlace interno */
 .listas a {
     display: inline-block;
-    padding: 0.8rem 1.2rem;   /* Tamaño perfecto para tocar con el dedo */
+    padding: 0.8rem 1rem;   /* Tamaño perfecto para tocar con el dedo */
     text-align: center;
-    font-size: 1.2rem;        /* Un poco más grande para leer bien */
+    font-size: 1rem;        /* Un poco más grande para leer bien */
 }
 
 
