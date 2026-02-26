@@ -28,6 +28,9 @@ body {
     height: 100%;
     font-size: 16px;
     font-family: "Playfair Display", serif;
+    overflow-x: hidden; /* Corta el desbordamiento horizontal */
+    width: 100%;
+    position: relative;
 }
 
 header {
