@@ -575,6 +575,13 @@ aside h3 {
 @media (max-width: 1280px) {
     .titulo { font-size: 5rem; } 
     .bloque-imagenes { width: 50%; height: 120%; }
+
+    .logo-mundo {
+        height: 5.5rem;
+        width: auto;
+        display: block;
+        padding-bottom: 3%;
+    }
     
 
     .seccion-noticia {
@@ -595,6 +602,276 @@ aside h3 {
     .txt-mini {
         font-size: 1.7rem;
     }
+
+
+
+    .pie-pagina {
+    background-color: var(--azulClaro); /* El azul oscuro que usas */
+    border-top: 3px solid var(--negro);
+    padding: 1rem 0 0 0;
+    color: var(--blanco);
+    font-family: 'Times New Roman', serif; /* Para ese estilo clásico de periódico */
+    margin-bottom: 0rem;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-around; /* Reparte las columnas equitativamente */
+    align-items: flex-start;
+    max-width: 200rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.footer-col a {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* --- LOGOTIPO --- */
+.logo-footer {
+    line-height: 0.8;
+    font-family: "UnifrakturMaguntia", cursive;
+    transition: color .25 ease;
+    margin-top: 4rem;
+}
+.logo-footer:hover {
+    color: var(--aquaIntermedio);
+}
+
+.logo-container h2 {
+    font-size: 5rem;
+}
+
+.logo-footer span {
+    font-size: 4rem;
+    margin-left: 9rem;
+}
+
+/* --- ENLACES --- */
+
+
+
+.enlaces-footer {
+    background-color: transparent;
+}
+
+.enlaces-footer a {
+    color: var(--blanco);
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    transition: color .25 ease;
+}
+
+.enlaces-footer a:hover {
+    color: var(--aquaIntermedio);
+}
+
+/* --- ICONOS SOCIALES --- */
+.footer-titulo {
+    font-size: 2rem;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: color .25 ease;
+}
+
+.footer-titulo:hover {
+    color: var(--aquaIntermedio);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.social-icons img {
+    width: 25px; /* Tamaño de tus PNG */
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* --- CONTACTO --- */
+.contacto-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+}
+
+.contacto-email img {
+    width: 35px;
+}
+
+/* --- BARRA FINAL --- */
+.footer-bottom {
+    text-align: center;
+    border-top: 3px solid var(--negro);
+    margin-top: 0rem;
+    background-color: var(--azulClaro);
+    
+}
+
+.footer-bottom p {
+    margin-bottom: 1rem;
+    margin:0;
+    padding: 1rem 0;
+    background-color: transparent;
+    font-size: 1.8rem;
+    transition: color .25 ease;
+}
+
+.footer-bottom p:hover {
+    color: var(--aquaIntermedio);
+}.pie-pagina {
+    background-color: var(--azulClaro); /* El azul oscuro que usas */
+    border-top: 3px solid var(--negro);
+    padding: 1rem 0 0 0;
+    color: var(--blanco);
+    font-family: 'Times New Roman', serif; /* Para ese estilo clásico de periódico */
+    margin-bottom: 0rem;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-around; /* Reparte las columnas equitativamente */
+    align-items: flex-start;
+    max-width: 200rem;
+    margin: 0 auto;
+    padding: 0rem;
+}
+
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    margin-bottom: 0rem;
+}
+.footer-col a {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* --- LOGOTIPO --- */
+.logo-footer {
+    line-height: 0.8;
+    font-family: "UnifrakturMaguntia", cursive;
+    transition: color .25 ease;
+    margin-top: 4rem;
+}
+.logo-footer:hover {
+    color: var(--aquaIntermedio);
+}
+
+.logo-container h2 {
+    font-size: 3rem;
+}
+
+.logo-footer span {
+    font-size: 2rem;
+    margin-left: 5.4rem;
+}
+
+/* --- ENLACES --- */
+
+
+
+.enlaces-footer {
+    background-color: transparent;
+}
+
+.enlaces-footer a {
+    color: var(--blanco);
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    transition: color .25 ease;
+}
+
+.enlaces-footer a:hover {
+    color: var(--aquaIntermedio);
+}
+
+/* --- ICONOS SOCIALES --- */
+.footer-titulo {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: color .25 ease;
+}
+
+.footer-titulo:hover {
+    color: var(--aquaIntermedio);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    
+}
+
+.social-icons img {
+    width: 45px; /* Tamaño de tus PNG */
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2) translateY(-5px);
+}
+
+/* --- CONTACTO --- */
+.contacto-email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+}
+
+.contacto-email img {
+    width: 35px;
+}
+
+/* --- BARRA FINAL --- */
+.footer-bottom {
+    text-align: center;
+    border-top: 3px solid var(--negro);
+    margin-top: 0rem;
+    background-color: var(--azulClaro);
+    
+}
+
+.footer-bottom p {
+    margin-bottom: 1rem;
+    margin:0;
+    padding: 1rem 0;
+    background-color: transparent;
+    font-size: 1.8rem;
+    transition: color .25 ease;
+}
+
+.footer-bottom p:hover {
+    color: var(--aquaIntermedio);
+}
 }
 
 
